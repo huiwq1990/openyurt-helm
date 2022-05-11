@@ -1,2 +1,1 @@
-# openyurt-helm
-OpenYurt components helm charts
+# OpenYurt Helm Charts
