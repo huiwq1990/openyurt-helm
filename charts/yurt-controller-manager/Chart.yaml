@@ -1,0 +1,5 @@
+name: yurt-controller-manager
+description: The controller manager of OpenYurt
+type: application
+version: 0.6.0
+appVersion: 0.6.0
