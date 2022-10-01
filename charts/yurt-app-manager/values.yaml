@@ -8,7 +8,7 @@ image:
   repository: openyurt/yurt-app-manager
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest
+  tag: v0.6.0
 
 imageRegistry: "docker.io"
 imagePullSecrets: []
@@ -51,7 +51,7 @@ resources: {}
 
 nodeSelector: {}
 
-tolerations: []
+tolerations: [{"key": "node-role.kubernetes.io/master", "operator": "Exists", "effect": "NoSchedule"}]
 
 affinity: {}
 
@@ -72,7 +72,7 @@ admissionWebhooks:
       tag: v2.4.1
       pullPolicy: IfNotPresent
     affinity: {}
-    tolerations: []
+    tolerations: [{"key": "node-role.kubernetes.io/master", "operator": "Exists", "effect": "NoSchedule"}]
   certManager:
     enabled: false
     revisionHistoryLimit: 3
